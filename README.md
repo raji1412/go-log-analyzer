@@ -22,34 +22,42 @@ A production-ready log analyzer built using Golang, Gin, Docker, and structured 
 - Gin
 - Docker
 - Zap Logger
+---
+## ▶️ Run Locally
+
+go run ./cmd/loganalyzer
 
 ---
 
 
-## ▶️ Run Locally
-
-```bash
-go run ./cmd/loganalyzer
+## 🐳 Run with Docker
 
 
-🐳 Run with Docker
 docker-compose up --build
-📡 API Endpoints
-Health Check
+
+## 📡 API Endpoints
+
+### Health Check
+
 GET /health
 
-Response:
+### Response:
 
+```json
 {
   "status": "ok"
 }
+```
 Get Logs
+
 GET /logs?file=/app/logs.txt
 
-Optional filter:
+### Optional filter:
 
 GET /logs?file=/app/logs.txt&level=error
-📊 Example Response
+
+## 📊 Example Response
+```json
 {
   "status": "success",
   "data": {
@@ -58,22 +66,25 @@ GET /logs?file=/app/logs.txt&level=error
     "warning": 1
   }
 }
-🧱 Architecture
-Client
-  ↓
-Gin Router
-  ↓
-Middleware
-  ↓
-Analyzer Service
-  ↓
-Logs File
-📌 Future Improvements
+```
+
+## 🧱 Architecture
+      Client
+        ↓
+      Gin Router
+        ↓
+      Middleware
+        ↓
+      Analyzer Service
+        ↓
+      Logs File
+
+## 📌 Future Improvements
 Add database support (PostgreSQL)
 Add authentication layer
 Add metrics and monitoring
-👨‍💻 Author
 
+👨‍💻 Author
 Built by Rajitha
 
 
