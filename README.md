@@ -31,9 +31,9 @@ A production-ready log analyzer built using Golang, Gin, Docker, and structured 
 ```bash
 go run ./cmd/loganalyzer
 
+
 🐳 Run with Docker
 docker-compose up --build
-
 📡 API Endpoints
 Health Check
 GET /health
@@ -77,13 +77,3 @@ Add metrics and monitoring
 Built by Rajitha
 
 
----
-
-# 📁 5. .gitignore (Important)
-
-Create `.gitignore`:
-
-```text
-.env
-bin/
-*.log
