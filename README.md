@@ -80,9 +80,9 @@ GET /logs?file=/app/logs.txt&level=error
       Logs File
 
 ## 📌 Future Improvements
-Add database support (PostgreSQL)
-Add authentication layer
-Add metrics and monitoring
+1. Add database support (PostgreSQL)
+2. Add authentication layer
+3. Add metrics and monitoring
 
 👨‍💻 Author
 Built by Rajitha
